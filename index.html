@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GUDEPU PRANAV SAI | Developer Portfolio</title>
+  <meta name="description" content="GUDEPU PRANAV SAI – B.Tech CSE student at KL University, passionate student developer building impactful web applications." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ── Home-page only extra styles ── */
+    .hero-chips { display:flex;flex-wrap:wrap;gap:0.6rem;margin-top:1.5rem; animation:fadeDown 0.7s 0.6s ease both; }
+    .hero-chip {
+      display:inline-flex;align-items:center;gap:0.4rem;
+      padding:0.3rem 0.85rem;border-radius:99px;font-size:0.78rem;font-weight:600;
+      border:1px solid var(--border-light);color:var(--text-muted);background:var(--bg-card);
+    }
+    .hero-chip i { font-size:0.7rem;color:var(--accent-2); }
+    /* Quick-nav cards */
+    .quick-nav { display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.25rem;margin-top:4rem; }
+    .qnav-card {
+      background:var(--bg-card);border:1px solid var(--border-light);
+      border-radius:var(--radius);padding:1.5rem;text-align:center;
+      transition:all var(--transition);cursor:pointer;
+    }
+    .qnav-card:hover { border-color:var(--border);transform:translateY(-6px);box-shadow:0 12px 30px var(--accent-glow); }
+    .qnav-icon { font-size:2rem;margin-bottom:0.75rem;display:block; }
+    .qnav-title { font-weight:700;font-size:0.95rem; }
+    .qnav-desc  { font-size:0.8rem;color:var(--text-muted);margin-top:0.3rem; }
+  </style>
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">GPS ⚡</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/skills.html">Skills</a></li>
+        <li><a href="pages/projects.html">Projects</a></li>
+        <li><a href="pages/education.html">Education</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+          <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobile-menu" role="menu">
+    <a href="index.html"           onclick="closeMenu()">Home</a>
+    <a href="pages/about.html"     onclick="closeMenu()">About</a>
+    <a href="pages/skills.html"    onclick="closeMenu()">Skills</a>
+    <a href="pages/projects.html"  onclick="closeMenu()">Projects</a>
+    <a href="pages/education.html" onclick="closeMenu()">Education</a>
+    <a href="pages/contact.html"   onclick="closeMenu()">Contact</a>
+  </div>
+
+  <!-- ════════════ HERO ════════════ -->
+  <section id="hero">
+    <div class="hero-inner">
+
+      <!-- Left: content -->
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Available for Internships &amp; Opportunities
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm<br /><span class="gradient-text">Pranav Sai</span>
+        </h1>
+
+        <p class="hero-role">
+          <span id="typed-text"></span><span class="typed-cursor">|</span>
+        </p>
+
+        <p class="hero-desc">
+          B.Tech CSE student at <strong>KL University</strong> (2nd Year) — building impactful digital experiences with clean code, modern technologies, and a passion for problem-solving.
+        </p>
+
+        <div class="hero-actions">
+          <a href="pages/projects.html" class="btn btn-primary" id="hero-view-work">
+            <i class="fas fa-rocket"></i> View My Work
+          </a>
+          <a href="resume.pdf" download class="btn btn-outline" id="hero-resume">
+            <i class="fas fa-download"></i> Download CV
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/gudepupranav" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="mailto:pranavsai.gudepu@gmail.com" class="social-link" aria-label="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+
+        <div class="hero-chips">
+          <span class="hero-chip"><i class="fas fa-university"></i> KL University</span>
+          <span class="hero-chip"><i class="fas fa-code"></i> Full Stack Dev</span>
+          <span class="hero-chip"><i class="fas fa-map-marker-alt"></i> India</span>
+          <span class="hero-chip"><i class="fas fa-graduation-cap"></i> 2nd Year CSE</span>
+        </div>
+      </div>
+
+      <!-- Right: Avatar -->
+      <div class="hero-avatar-wrap" aria-hidden="true">
+        <div class="avatar-outer">
+          <!-- Spinning border ring -->
+          <div style="position:absolute;inset:0;border-radius:50%;padding:3px;
+               background:conic-gradient(from 0deg,var(--accent),var(--accent-2),#ec4899,var(--accent));
+               animation:spin 5s linear infinite;">
+            <div style="width:100%;height:100%;border-radius:50%;background:var(--bg-primary);"></div>
+          </div>
+          <!-- Inner circle -->
+          <div class="avatar-circle" style="position:absolute;inset:6px;border-radius:50%;
+               background:linear-gradient(135deg,var(--accent) 0%,var(--accent-2) 100%);
+               display:flex;align-items:center;justify-content:center;
+               box-shadow:0 0 60px var(--accent-glow),0 0 120px rgba(6,182,212,0.15);">
+            <span class="avatar-initials">GPS</span>
+          </div>
+          <!-- Floating badges -->
+          <div class="fbadge fbadge-1">
+            <i class="fas fa-code"></i> Full Stack Dev
+          </div>
+          <div class="fbadge fbadge-2">
+            <i class="fas fa-graduation-cap"></i> KL University
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Quick navigation cards below hero -->
+    <div class="container" style="padding-top:0;padding-bottom:60px;">
+      <div class="quick-nav reveal">
+        <a href="pages/about.html" class="qnav-card">
+          <span class="qnav-icon">👤</span>
+          <div class="qnav-title">About Me</div>
+          <div class="qnav-desc">Who I am & my story</div>
+        </a>
+        <a href="pages/skills.html" class="qnav-card">
+          <span class="qnav-icon">⚙️</span>
+          <div class="qnav-title">Skills</div>
+          <div class="qnav-desc">Technologies I work with</div>
+        </a>
+        <a href="pages/projects.html" class="qnav-card">
+          <span class="qnav-icon">🚀</span>
+          <div class="qnav-title">Projects</div>
+          <div class="qnav-desc">What I've built</div>
+        </a>
+        <a href="pages/education.html" class="qnav-card">
+          <span class="qnav-icon">🎓</span>
+          <div class="qnav-title">Education</div>
+          <div class="qnav-desc">My academic journey</div>
+        </a>
+        <a href="pages/contact.html" class="qnav-card">
+          <span class="qnav-icon">📩</span>
+          <div class="qnav-title">Contact</div>
+          <div class="qnav-desc">Let's connect</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-socials">
+      <a href="https://github.com/gudepupranav" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:pranavsai.gudepu@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>Designed &amp; Built by <strong>GUDEPU PRANAV SAI</strong> · <a href="https://github.com/gudepupranav" target="_blank">@gudepupranav</a></p>
+    <p style="margin-top:0.5rem;">© <span id="footer-year"></span> All Rights Reserved</p>
+  </footer>
+
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

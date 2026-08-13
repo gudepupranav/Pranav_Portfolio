@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills | GUDEPU PRANAV SAI</title>
+  <meta name="description" content="Technical skills and tech stack of GUDEPU PRANAV SAI – HTML, CSS, JavaScript, React, Node.js, Java, C, MySQL." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .proficiency-bar { margin-top:0.75rem; }
+    .prog-label { display:flex;justify-content:space-between;font-size:0.78rem;color:var(--text-muted);margin-bottom:0.3rem; }
+    .prog-track { height:6px;border-radius:99px;background:var(--border-light);overflow:hidden; }
+    .prog-fill  { height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent-2));width:0;transition:width 1.2s cubic-bezier(0.4,0,0.2,1); }
+  </style>
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">GPS ⚡</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-btn" id="theme-toggle"><i class="fas fa-moon" id="theme-icon"></i></button>
+        <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html"  onclick="closeMenu()">Home</a>
+    <a href="about.html"     onclick="closeMenu()">About</a>
+    <a href="skills.html"    onclick="closeMenu()">Skills</a>
+    <a href="projects.html"  onclick="closeMenu()">Projects</a>
+    <a href="education.html" onclick="closeMenu()">Education</a>
+    <a href="contact.html"   onclick="closeMenu()">Contact</a>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="section-tag"><i class="fas fa-tools"></i> Technical Skills</span>
+        <h1 class="section-title">My <span class="gradient-text">Tech Stack</span></h1>
+        <div class="divider"></div>
+        <p class="section-subtitle">Languages, frameworks and tools I use to build things.</p>
+      </div>
+
+      <!-- Skill category cards -->
+      <div class="skills-grid" style="margin-top:2.5rem;">
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon" style="background:rgba(124,58,237,0.15);color:#7c3aed;"><i class="fas fa-laptop-code"></i></div>
+            <span class="skill-card-title">Frontend</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML5</span>
+            <span class="skill-tag">CSS3</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Responsive Design</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon" style="background:rgba(6,182,212,0.15);color:#06b6d4;"><i class="fas fa-server"></i></div>
+            <span class="skill-card-title">Backend</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">REST APIs</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon" style="background:rgba(236,72,153,0.15);color:#ec4899;"><i class="fas fa-database"></i></div>
+            <span class="skill-card-title">Database</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">MySQL</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">Firebase</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon" style="background:rgba(245,158,11,0.15);color:#f59e0b;"><i class="fas fa-terminal"></i></div>
+            <span class="skill-card-title">Languages</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">C</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">SQL</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon" style="background:rgba(34,197,94,0.15);color:#22c55e;"><i class="fas fa-code-branch"></i></div>
+            <span class="skill-card-title">Tools &amp; DevOps</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Git &amp; GitHub</span>
+            <span class="skill-tag">VS Code</span>
+            <span class="skill-tag">npm</span>
+            <span class="skill-tag">Vercel</span>
+            <span class="skill-tag">Netlify</span>
+          </div>
+        </div>
+
+        <div class="skill-card reveal">
+          <div class="skill-card-header">
+            <div class="skill-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;"><i class="fas fa-lightbulb"></i></div>
+            <span class="skill-card-title">Core CS Concepts</span>
+          </div>
+          <div class="skill-tags">
+            <span class="skill-tag">Data Structures</span>
+            <span class="skill-tag">Algorithms</span>
+            <span class="skill-tag">OOP</span>
+            <span class="skill-tag">DBMS</span>
+            <span class="skill-tag">OS Basics</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Proficiency bars -->
+      <div style="margin-top:4rem;" class="reveal">
+        <span class="section-tag"><i class="fas fa-chart-bar"></i> Proficiency</span>
+        <h2 class="section-title" style="font-size:1.8rem;">Key Language <span class="gradient-text">Proficiency</span></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div id="proficiency-bars" style="max-width:700px;display:flex;flex-direction:column;gap:1.5rem;" class="reveal">
+        <div class="proficiency-bar">
+          <div class="prog-label"><span>HTML / CSS</span><span>90%</span></div>
+          <div class="prog-track"><div class="prog-fill" data-width="90"></div></div>
+        </div>
+        <div class="proficiency-bar">
+          <div class="prog-label"><span>JavaScript</span><span>80%</span></div>
+          <div class="prog-track"><div class="prog-fill" data-width="80"></div></div>
+        </div>
+        <div class="proficiency-bar">
+          <div class="prog-label"><span>React.js</span><span>75%</span></div>
+          <div class="prog-track"><div class="prog-fill" data-width="75"></div></div>
+        </div>
+        <div class="proficiency-bar">
+          <div class="prog-label"><span>Java</span><span>78%</span></div>
+          <div class="prog-track"><div class="prog-fill" data-width="78"></div></div>
+        </div>
+        <div class="proficiency-bar">
+          <div class="prog-label"><span>C</span><span>72%</span></div>
+          <div class="prog-track"><div class="prog-fill" data-width="72"></div></div>
+        </div>
+        <div class="proficiency-bar">
+          <div class="prog-label"><span>Node.js / Express</span><span>70%</span></div>
+          <div class="prog-track"><div class="prog-fill" data-width="70"></div></div>
+        </div>
+        <div class="proficiency-bar">
+          <div class="prog-label"><span>MySQL / MongoDB</span><span>68%</span></div>
+          <div class="prog-track"><div class="prog-fill" data-width="68"></div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-socials">
+      <a href="https://github.com/gudepupranav" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:pranavsai.gudepu@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© <span id="footer-year"></span> GUDEPU PRANAV SAI</p>
+  </footer>
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    // Animate progress bars when visible
+    const bars = document.querySelectorAll('.prog-fill');
+    const barObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          bars.forEach(bar => bar.style.width = bar.dataset.width + '%');
+          barObs.disconnect();
+        }
+      });
+    }, { threshold: 0.3 });
+    barObs.observe(document.getElementById('proficiency-bars'));
+  </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | GUDEPU PRANAV SAI</title>
+  <meta name="description" content="Get in touch with GUDEPU PRANAV SAI – student developer at KL University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true"><div class="blob blob-1"></div><div class="blob blob-2"></div><div class="blob blob-3"></div></div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">GPS ⚡</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-btn" id="theme-toggle"><i class="fas fa-moon" id="theme-icon"></i></button>
+        <button class="hamburger" id="hamburger" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html"  onclick="closeMenu()">Home</a>
+    <a href="about.html"     onclick="closeMenu()">About</a>
+    <a href="skills.html"    onclick="closeMenu()">Skills</a>
+    <a href="projects.html"  onclick="closeMenu()">Projects</a>
+    <a href="education.html" onclick="closeMenu()">Education</a>
+    <a href="contact.html"   onclick="closeMenu()">Contact</a>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <div class="reveal">
+        <span class="section-tag"><i class="fas fa-paper-plane"></i> Contact</span>
+        <h1 class="section-title">Let's <span class="gradient-text">Connect</span></h1>
+        <div class="divider"></div>
+        <p class="section-subtitle">Open to internships, collaborations, or just a friendly chat. Feel free to reach out!</p>
+      </div>
+
+      <div class="contact-grid reveal" style="margin-top:3rem;">
+
+        <!-- Left: Contact Info -->
+        <div class="contact-info">
+          <h3>Get In Touch</h3>
+          <p>I'm always happy to hear from recruiters, fellow developers, and anyone building cool things. Drop a message below or reach me on social!</p>
+
+          <div class="contact-items">
+
+            <a href="mailto:pranavsai.gudepu@gmail.com" class="contact-item" style="text-decoration:none;color:inherit;">
+              <div class="contact-item-icon" style="background:rgba(124,58,237,0.15);color:#7c3aed;">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-item-text">
+                <span>Email</span>
+                <strong>pranavsai.gudepu@gmail.com</strong>
+              </div>
+            </a>
+
+            <a href="https://github.com/gudepupranav" target="_blank" class="contact-item" style="text-decoration:none;color:inherit;" id="contact-github">
+              <div class="contact-item-icon" style="background:rgba(6,182,212,0.15);color:#06b6d4;">
+                <i class="fab fa-github"></i>
+              </div>
+              <div class="contact-item-text">
+                <span>GitHub</span>
+                <strong>github.com/gudepupranav</strong>
+              </div>
+            </a>
+
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-item" style="text-decoration:none;color:inherit;" id="contact-linkedin">
+              <div class="contact-item-icon" style="background:rgba(14,165,233,0.15);color:#0ea5e9;">
+                <i class="fab fa-linkedin"></i>
+              </div>
+              <div class="contact-item-text">
+                <span>LinkedIn</span>
+                <strong>linkedin.com/in/yourusername</strong>
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <div class="contact-item-icon" style="background:rgba(34,197,94,0.15);color:#22c55e;">
+                <i class="fas fa-university"></i>
+              </div>
+              <div class="contact-item-text">
+                <span>Institution</span>
+                <strong>KL University, Vijayawada</strong>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Resume CTA -->
+          <div style="margin-top:2rem;">
+            <a href="../resume.pdf" download class="btn btn-primary" style="width:100%;justify-content:center;">
+              <i class="fas fa-file-pdf"></i> Download Resume
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="contact-form">
+          <form id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Your Name *</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="john@email.com" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Internship, Collaboration, Project..." />
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit" id="form-submit-btn">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+            <div id="form-status" style="margin-top:1rem;text-align:center;font-size:0.9rem;"></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-socials">
+      <a href="https://github.com/gudepupranav" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:pranavsai.gudepu@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>© <span id="footer-year"></span> GUDEPU PRANAV SAI</p>
+  </footer>
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+  <script src="../js/main.js"></script>
+</body>
+</html>

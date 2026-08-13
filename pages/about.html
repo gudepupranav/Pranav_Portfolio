@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | GUDEPU PRANAV SAI</title>
+  <meta name="description" content="Learn about GUDEPU PRANAV SAI – B.Tech CSE 2nd year student at KL University." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-logo">GPS ⚡</a>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon" id="theme-icon"></i></button>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="../index.html"  onclick="closeMenu()">Home</a>
+    <a href="about.html"     onclick="closeMenu()">About</a>
+    <a href="skills.html"    onclick="closeMenu()">Skills</a>
+    <a href="projects.html"  onclick="closeMenu()">Projects</a>
+    <a href="education.html" onclick="closeMenu()">Education</a>
+    <a href="contact.html"   onclick="closeMenu()">Contact</a>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="container">
+
+      <!-- Header -->
+      <div class="reveal">
+        <span class="section-tag"><i class="fas fa-user"></i> About Me</span>
+        <h1 class="section-title">Crafting <span class="gradient-text">Digital Experiences</span></h1>
+        <div class="divider"></div>
+      </div>
+
+      <!-- About Grid -->
+      <div class="about-grid reveal">
+
+        <!-- Left: Bio -->
+        <div>
+          <p style="color:var(--text-secondary);margin-bottom:1rem;">
+            I'm <strong style="color:var(--text-primary);">GUDEPU PRANAV SAI</strong> — a passionate
+            Computer Science student currently in my <strong style="color:var(--accent);">2nd year of B.Tech at KL University</strong>.
+            I love turning complex problems into clean, elegant solutions across the full stack.
+          </p>
+          <p style="color:var(--text-secondary);margin-bottom:1rem;">
+            My journey started with curiosity about how websites work, and it has evolved into building real-world applications using React, Node.js, Java, and more. I enjoy every layer of development — from crafting pixel-perfect UIs to designing robust backend APIs.
+          </p>
+          <p style="color:var(--text-secondary);margin-bottom:2rem;">
+            When I'm not coding, you'll find me exploring new technologies, solving DSA problems, or collaborating on open-source projects that make a difference.
+          </p>
+
+          <ul class="info-list">
+            <li><i class="fas fa-user"></i> GUDEPU PRANAV SAI</li>
+            <li><i class="fas fa-envelope"></i> pranavsai.gudepu@gmail.com</li>
+            <li><i class="fas fa-university"></i> KL University – B.Tech CSE (2025–2029)</li>
+            <li><i class="fas fa-map-marker-alt"></i> India</li>
+            <li><i class="fab fa-github"></i> github.com/gudepupranav</li>
+          </ul>
+
+          <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+            <a href="../resume.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+            <a href="contact.html" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Hire Me</a>
+          </div>
+        </div>
+
+        <!-- Right: Stats + GitHub -->
+        <div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-num" id="counter-projects">0</div>
+              <div class="stat-label">Projects Built</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" id="counter-skills">0</div>
+              <div class="stat-label">Technologies</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" id="counter-certs">0</div>
+              <div class="stat-label">Certifications</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" id="counter-hours">0</div>
+              <div class="stat-label">Coding Hours</div>
+            </div>
+          </div>
+
+          <!-- GitHub Live Stats -->
+          <div style="margin-top:1.5rem;">
+            <p style="font-size:0.8rem;color:var(--text-muted);text-align:center;margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:1px;">
+              <i class="fab fa-github" style="margin-right:0.4rem;"></i> GitHub Live Stats
+            </p>
+            <div class="github-stats">
+              <div class="gh-stat-card"><div class="gh-stat-num" id="gh-repos">—</div><div class="gh-stat-label">Repos</div></div>
+              <div class="gh-stat-card"><div class="gh-stat-num" id="gh-followers">—</div><div class="gh-stat-label">Followers</div></div>
+              <div class="gh-stat-card"><div class="gh-stat-num" id="gh-following">—</div><div class="gh-stat-label">Following</div></div>
+            </div>
+          </div>
+
+          <!-- What I enjoy -->
+          <div style="margin-top:2rem;">
+            <p style="font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:1rem;">
+              <i class="fas fa-heart" style="color:var(--accent);margin-right:0.4rem;"></i> What I Enjoy
+            </p>
+            <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
+              <span style="padding:0.3rem 0.85rem;border-radius:99px;font-size:0.8rem;border:1px solid var(--border-light);color:var(--text-secondary);">💻 Web Development</span>
+              <span style="padding:0.3rem 0.85rem;border-radius:99px;font-size:0.8rem;border:1px solid var(--border-light);color:var(--text-secondary);">🧩 Problem Solving</span>
+              <span style="padding:0.3rem 0.85rem;border-radius:99px;font-size:0.8rem;border:1px solid var(--border-light);color:var(--text-secondary);">🌐 Open Source</span>
+              <span style="padding:0.3rem 0.85rem;border-radius:99px;font-size:0.8rem;border:1px solid var(--border-light);color:var(--text-secondary);">📱 App Building</span>
+              <span style="padding:0.3rem 0.85rem;border-radius:99px;font-size:0.8rem;border:1px solid var(--border-light);color:var(--text-secondary);">☕ Java / DSA</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="footer-socials">
+      <a href="https://github.com/gudepupranav" target="_blank" class="social-link"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:pranavsai.gudepu@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+    </div>
+    <p>Designed &amp; Built by <strong>GUDEPU PRANAV SAI</strong></p>
+    <p style="margin-top:0.5rem;">© <span id="footer-year"></span> All Rights Reserved</p>
+  </footer>
+  <button id="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="../js/main.js"></script>
+  <script>
+    fetchGitHub();
+    const counterObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(document.getElementById('counter-projects'), 6);
+          animateCounter(document.getElementById('counter-skills'),   15);
+          animateCounter(document.getElementById('counter-certs'),    6);
+          animateCounter(document.getElementById('counter-hours'),    500, '+');
+          counterObs.disconnect();
+        }
+      });
+    }, { threshold: 0.4 });
+    counterObs.observe(document.querySelector('.about-stats'));
+  </script>
+</body>
+</html>
