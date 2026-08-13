@@ -102,29 +102,66 @@
   if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
       e.preventDefault();
-      const btn    = document.getElementById('form-submit-btn');
-      const status = document.getElementById('form-status');
-      const name   = document.getElementById('name').value.trim();
-      const email  = document.getElementById('email').value.trim();
-      const msg    = document.getElementById('message').value.trim();
+      const btn       = document.getElementById('form-submit-btn');
+      const status    = document.getElementById('form-status');
+      const accessKey = document.getElementById('web3forms-access-key') ? document.getElementById('web3forms-access-key').value : '';
+      const name      = document.getElementById('name').value.trim();
+      const email     = document.getElementById('email').value.trim();
+      const subject   = document.getElementById('subject') ? document.getElementById('subject').value.trim() : 'Portfolio Contact';
+      const msg       = document.getElementById('message').value.trim();
+
       if (!name || !email || !msg) {
         status.innerHTML = '<span style="color:#ef4444"><i class="fas fa-exclamation-circle"></i> Please fill all required fields.</span>';
         return;
       }
+
       btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
       btn.disabled  = true;
-      setTimeout(() => {
-        btn.innerHTML   = '<i class="fas fa-check"></i> Message Sent!';
-        btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
-        status.innerHTML = `<span style="color:#22c55e"><i class="fas fa-check-circle"></i> Thanks <strong>${name}</strong>! I'll reply soon.</span>`;
-        contactForm.reset();
+
+      // Check if Web3Forms key is set
+      if (!accessKey || accessKey === 'YOUR_ACCESS_KEY') {
+        // Fallback demo notification explaining how to receive real emails
+        setTimeout(() => {
+          btn.innerHTML   = '<i class="fas fa-check"></i> Message Demo';
+          btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+          status.innerHTML = `<span style="color:#eab308"><i class="fas fa-info-circle"></i> Demo mode: Add your free Web3Forms key to receive messages in <strong>pranavsai.gudepu@gmail.com</strong>!</span>`;
+          contactForm.reset();
+          setTimeout(() => {
+            btn.innerHTML   = '<i class="fas fa-paper-plane"></i> Send Message';
+            btn.style.background = '';
+            btn.disabled  = false;
+          }, 5000);
+        }, 1200);
+        return;
+      }
+
+      const formData = new FormData(contactForm);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+      .then(async (response) => {
+        const json = await response.json();
+        if (response.status === 200 && json.success) {
+          btn.innerHTML   = '<i class="fas fa-check"></i> Message Sent!';
+          btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+          status.innerHTML = `<span style="color:#22c55e"><i class="fas fa-check-circle"></i> Thanks <strong>${name}</strong>! Your message was sent directly to my email.</span>`;
+          contactForm.reset();
+        } else {
+          status.innerHTML = `<span style="color:#ef4444"><i class="fas fa-exclamation-circle"></i> ${json.message || 'Error sending message.'}</span>`;
+        }
+      })
+      .catch(() => {
+        status.innerHTML = '<span style="color:#ef4444"><i class="fas fa-exclamation-circle"></i> Failed to send. Please try emailing directly.</span>';
+      })
+      .finally(() => {
         setTimeout(() => {
           btn.innerHTML   = '<i class="fas fa-paper-plane"></i> Send Message';
           btn.style.background = '';
           btn.disabled  = false;
-          status.innerHTML = '';
         }, 4000);
-      }, 1500);
+      });
     });
   }
 
